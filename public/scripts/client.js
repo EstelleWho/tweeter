@@ -63,6 +63,7 @@ const renderTweets = function(tweets) {
 // takes return value and appends it to the tweets container
 const $tweetsContainer = $('#tweets-container'); // this is jQuery
 $tweetsContainer.empty(); 
+tweets.reverse(); // the newest tweets are on top
 // the loop
 for (const tweet of tweets) {
   const $tweet = createTweetElement(tweet);
@@ -73,6 +74,22 @@ for (const tweet of tweets) {
 // SUBMISSION
 $('form').on('submit', function(event) {
   event.preventDefault(); //handler function to prevent default from submission
+  
+// FORM VALIDATION: IN THE EVENT CRITERIA ARE NOT MET
+  const tweetContent = $('#tweet-text').val();
+
+  if (tweetContent.trim() === '') {
+    // IF EMPTY
+    alert('Error: Tweet content is required');
+    return; // SUBMISSION STOP
+  }
+
+  if (tweetContent.length > 140) {
+    // IF MORE THAN 140 CHARAC
+    alert('Error: Tweet content exceeds the character limit');
+    return; // SUBMISSION STOP
+  }
+  
   const data = $(this).serialize();
   console.log("data:", data);
 
@@ -83,18 +100,27 @@ $('form').on('submit', function(event) {
     success: function(res) {
       console.log('Success');
       console.log(res);
+      loadtweets(); // Shows new tweets without refreshing
     },
     error: function(error) {
       console.log('Failed')
       console.log(error);
       },
     });
+
+// REFRESH
   $('#tweet-text').val('');
   $('.counter').val('140');
   });
 
 // LOAD TWEETS
-
+const loadtweets = () => {
+  $.get('http://localhost:8080/tweets').then((data) => {
+    console.log(data);
+    renderTweets(data);
+  });
+};
+loadtweets();
 
 
 
