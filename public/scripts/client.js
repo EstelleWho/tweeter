@@ -41,7 +41,7 @@ $(document).ready(function() {
       <span class="user-handle">${tweet.user.handle}</span>
     </header>
     <div class="tweet-content">
-      ${tweet.content.text}
+    <p>${escape(tweet.content.text)}</p>
     </div>
     <footer>
       <span class="tweet-timestamp">${timeago.format(tweet.created_at)}</span>
@@ -55,6 +55,13 @@ $(document).ready(function() {
     `);
   return $tweet;
   };
+
+// XSS PREVENTION W/ ESCAPING
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 // RENDERING TWEETS
 const renderTweets = function(tweets) {
@@ -121,8 +128,6 @@ const loadtweets = () => {
   });
 };
 loadtweets();
-
-
 
 
 });
