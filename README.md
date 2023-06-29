@@ -7,9 +7,8 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Product
 
 <img width="888" alt="Screenshot1" src="https://github.com/EstelleWho/tweeter/assets/122816900/3ded949d-7355-4a64-ab58-73739c25bd92">
-
-!["screenshot description"](./docs/Screenshot2)
-!["screenshot description"](./docs/Screenshot3)
+<img width="1722" alt="Screenshot2" src="https://github.com/EstelleWho/tweeter/assets/122816900/3e23bef0-2556-4692-8198-ff777fa0beb1">
+<img width="831" alt="Screenshot3" src="https://github.com/EstelleWho/tweeter/assets/122816900/7e50231d-3315-4ddd-b6e1-085f780e4e18">
 
 ## Getting Started
 
