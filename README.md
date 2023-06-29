@@ -6,7 +6,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["screenshot description"](./docs/Screenshot1)
+<img width="888" alt="Screenshot1" src="https://github.com/EstelleWho/tweeter/assets/122816900/3ded949d-7355-4a64-ab58-73739c25bd92">
+
 !["screenshot description"](./docs/Screenshot2)
 !["screenshot description"](./docs/Screenshot3)
 
