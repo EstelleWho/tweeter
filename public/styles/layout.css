@@ -30,3 +30,55 @@ main {
   margin: 0 auto;
   background-color: inherit;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 5%;
+  background-color: #f4f1ec;
+  font-weight: bold;
+  padding-top: 5px;
+ }
+
+ @media only screen and (min-width: 1024px) {
+  .responsive {
+    display: flex;
+    width: 100%;
+  }
+  .container {
+    margin-top: 150px;
+  }
+  #tweets-container {
+    width: 100%;
+  }
+ }
+
+ .content-line {
+  border: none;
+  border-top: 4px solid #545149;
+  margin: 10px 0;
+}
+
+ form {
+  margin-top: 85px;
+}
+
+.header {
+  margin: 80px;
+  margin-top: 170px;
+  padding: 50px;
+  padding-top: 50px;
+  border: 5px solid #4a4a4a;;
+}
+
+.header-avatar {
+  padding-top: 65px;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+}
+  
