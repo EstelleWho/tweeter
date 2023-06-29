@@ -6,9 +6,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["screenshot description"](./docs/Screenshot 2023-06-29 at 1.48.24 PM)
-!["screenshot description"](./docs/Screenshot 2023-06-29 at 1.47.29 PM)
-!["screenshot description"](./docs/Screenshot 2023-06-29 at 1.48.43 PM)
+!["screenshot description"](./docs/Screenshot1)
+!["screenshot description"](./docs/Screenshot2)
+!["screenshot description"](./docs/Screenshot3)
 
 ## Getting Started
 
