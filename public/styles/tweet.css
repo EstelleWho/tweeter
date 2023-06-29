@@ -1,0 +1,34 @@
+.tweet {
+  border: 4px solid #545149;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1em 0em;
+}
+
+/* Shadow around Box */
+.tweet:hover {
+  box-shadow: 8px 8px rgba(163, 162, 162, 0.704);
+}
+
+.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0em .3em;
+}
+
+.tweet:hover .handle {
+  visibility: visible;
+  color: rgb(163, 162, 162);
+  position: relative;
+  right: 0;
+}
+
+.tweet footer {
+  padding: .5em 0em;
+  margin: 0em .3em;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
