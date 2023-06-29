@@ -5,10 +5,10 @@ textarea {
   font-weight: bold;
   border: none;
   border-bottom: solid 3px #545149;
-  margin-top: 1em;
+  margin-top: 0em;
   margin-bottom: 1em;
   color: #545149;
-  height: 50px;
+  height: 60px;
   width: 100%;
   outline: none;
 }
@@ -34,4 +34,28 @@ label[for="tweet-text"] {
   outline: none;
 }
 
+#error-container {
+  display: none;
+  font-family: 'Bungee', cursive, sans-serif;
+  font-weight: 200;
+  border: 4px solid #ff0000;
+  color: #ff0000;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  background: none;
+  box-sizing: border-box;
+}
 
+#error-container .fa-exclamation-circle {
+  margin-right: 5px;
+}
+
+.new-tweet {
+  position: relative;
+  z-index: 0;
+}
