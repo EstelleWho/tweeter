@@ -42,6 +42,7 @@ $(document).ready(function() {
     </header>
     <div class="tweet-content">
     <p>${escape(tweet.content.text)}</p>
+    <hr class="content-line">
     </div>
     <footer>
       <span class="tweet-timestamp">${timeago.format(tweet.created_at)}</span>
@@ -84,21 +85,29 @@ $('form').on('submit', function(event) {
   
 // FORM VALIDATION: IN THE EVENT CRITERIA ARE NOT MET
   const tweetContent = $('#tweet-text').val();
+  const $errorContainer = $('#error-container');
+  const $errorMessage = $('#error-message');
+
+  $errorContainer.slideUp();
 
   if (tweetContent.trim() === '') {
     // IF EMPTY
-    alert('Error: Tweet content is required');
+    $errorMessage.text('Error: Tweet something exciting!');
+    $errorContainer.slideDown();
     return; // SUBMISSION STOP
   }
 
   if (tweetContent.length > 140) {
     // IF MORE THAN 140 CHARAC
-    alert('Error: Tweet content exceeds the character limit');
+    $errorMessage.text('Error: Oh no! Too wordy!');
+    $errorContainer.slideDown();
     return; // SUBMISSION STOP
   }
   
   const data = $(this).serialize();
   console.log("data:", data);
+
+
 
   $.ajax({
     type: 'POST',
@@ -128,6 +137,5 @@ const loadtweets = () => {
   });
 };
 loadtweets();
-
 
 });
